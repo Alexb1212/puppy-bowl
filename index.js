@@ -21,7 +21,32 @@ const getPlayers = async() => {
   renderPlayers();
 }
 
+// render players
+const renderPlayers = () => {
+  main.innerHTML = ``;
 
+  // create ol
+  const ol = document.createElement(`ol`);
+  
+  // go through each player
+  state.players.forEach((singlePlayer) => {
+    // create li for each player
+    const li = document.createElement(`li`);
+    // put player name in li
+    li.innerText = singlePlayer.name
+
+    // add event listener for li
+    li.addEventListener(`click`, () => {
+      state.breed = singlePlayer;
+      renderPlayerBreed();
+    })
+
+    // append li to the ol
+    ol.append(li);
+  });
+
+  main.append(ol);
+}
 
 
 // invoke players
