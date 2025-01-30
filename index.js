@@ -10,10 +10,10 @@ const main = document.querySelector(`main`);
 // create async for players
 const getPlayers = async() => {
   const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2501-ftb-et-web-ft/players`);
-  console.log(response)
+  // console.log(response)
 
   const jsonObject = await response.json();
-  console.log(jsonObject.data.players);
+  // console.log(jsonObject.data.players);
 
   const allPlayers = jsonObject.data.players
 
