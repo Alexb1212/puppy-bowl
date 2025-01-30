@@ -49,5 +49,34 @@ const renderPlayers = () => {
 }
 
 
+
+// render player breed
+const renderPlayerBreed = () => {
+  // get breed from player clicked
+  const breedHTML = `
+  <h2>${state.breed.name}</h2>
+
+  <p>${state.breed.breed}</p>
+  `;
+  // console.log(breedHTML)
+
+  // create button
+  const button = document.createElement(`button`);
+
+  // set button to back
+  button.innerText = `BACK!`;
+  // add event listener to button
+  button.addEventListener(`click`, () => {
+    renderPlayers();
+  });
+
+  // replace main element with breed details
+  main.innerHTML = breedHTML;
+
+  // append the button to the main
+  main.append(button);
+}
+
+
 // invoke players
 getPlayers();
