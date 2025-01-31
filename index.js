@@ -57,6 +57,12 @@ const renderPlayerBreed = () => {
   <h2>${state.breed.name}</h2>
 
   <p>${state.breed.breed}</p>
+
+  <p><b>Status:</b> ${state.breed.status}</p>
+  <p><b>Updated at:</b> ${state.breed.updatedAt}</p>
+  <p><b>Created At:</b> ${state.breed.createdAt}</p>
+  <img src="${state.breed.imageUrl}" style= width="25%" height="25%">
+  <img src="
   `;
   // console.log(breedHTML)
 
